@@ -36,6 +36,14 @@ ApplicationWindow {
 
     header: ToolBar {
     
+    // Didn't know this is how you set background colors for
+    // controls in QML.
+    // Based on this info here:
+    // https://stackoverflow.com/a/27619649
+    background: Rectangle {
+        color: 'black'
+    }
+
                 Label {
                 id: titleLabel
                 text: listView.currentItem ? listView.currentItem.text : "Gallery"
