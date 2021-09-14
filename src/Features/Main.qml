@@ -48,8 +48,11 @@ ApplicationWindow {
 
                 Item {
                 // Adding an empty Item to space the header from the left.
+                // TODO: Get this empty item's spacing to be closer to WP's
+                // spacing for a given app that uses large headers, like
+                // pages in the Settings app.
                 height: 50
-                width: 50
+                width: 30
                 }
 
                 Label {
