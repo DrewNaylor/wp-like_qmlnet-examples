@@ -62,7 +62,7 @@ ApplicationWindow {
 
         transform: Translate {
         // Move the menu to make it look like WP's ellipsis menu opening.
-        y: drawer.position * appBar.height * -1.33
+        y: drawer.position * appBar.height * -5
          }
 
         RowLayout {
@@ -106,7 +106,9 @@ ApplicationWindow {
     Drawer {
         id: drawer
         width: window.width
-        height: Math.min(window.height) / 3
+        // Set height to 240 so that the app bar always moves out of the way,
+        // even when the window is taller or shorter.
+        height: 240
         interactive: stackView.depth === 1
         // Setting edge to Qt.BottomEdge makes the menu
         // kinda look like WP's ellipsis menu, except it
