@@ -54,8 +54,11 @@ ApplicationWindow {
 
                 Label {
                 id: titleLabel
+                // TODO: Figure out a way to keep the current page's
+                // title so that previous pages are shown again when pressing the Back button.
                 text: listView.currentItem ? listView.currentItem.text : "Gallery"
-                font.pixelSize: 20
+                // Not sure if this is the right font size, but it's closer.
+                font.pixelSize: 50
                 elide: Label.ElideRight
                 horizontalAlignment: Qt.AlignHCenter
                 verticalAlignment: Qt.AlignVCenter
