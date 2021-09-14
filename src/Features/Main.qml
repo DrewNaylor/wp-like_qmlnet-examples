@@ -129,6 +129,15 @@ ApplicationWindow {
     }
 
     Drawer {
+    // TODO: Figure out a way to allow the drawer to be closed from any
+    // page and not just from clicking inside the main page or clicking
+    // on any of the items in the drawer.
+    // TODO 2: Figure out how to let the user drag the app bar back down
+    // on both the right and the left side to close the
+    // drawer, like on Windows Phone.
+    // TODO 3: Change the app bar icons so they're closer to WP, especially
+    // the app bar drawer opening button, as that's more like Windows 10
+    // Mobile.
         id: drawer
         width: window.width
         // Set height to 240 so that the app bar always moves out of the way,
@@ -144,6 +153,18 @@ ApplicationWindow {
         edge: Qt.BottomEdge
 
 
+        // Removing the shadow from the drawer:
+        // https://stackoverflow.com/a/63411102
+        Overlay.modal: Rectangle {
+                  color: "transparent"
+              }
+
+       Rectangle {
+       // You have to set this rectangle's color
+       // or else it'll be white.
+            anchors.fill: parent
+            color: "transparent"
+        
 
         ListView {
             id: listView
@@ -175,7 +196,7 @@ ApplicationWindow {
             }
 
             ScrollIndicator.vertical: ScrollIndicator { }
-            
+            }
         }
     }
 
