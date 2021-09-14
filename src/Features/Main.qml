@@ -52,25 +52,35 @@ ApplicationWindow {
 
         RowLayout {
             spacing: 20
-            anchors.right: parent.right
+            anchors.fill: parent
+
 
             ToolButton {
-            // TODO: Don't have the ellipsis button be the back button,
-            // but have a back button show up on the left side where the old
-            // slide-out menu appeared.
-                icon.source: "images/menu.png"
-                onClicked: {
-                        drawer.open()
-                }
-            }
-
-            ToolButton {
+            // TODO: Hide the back button until it's needed.
                 icon.source: "images/back.png"
                 onClicked: {
                     if (stackView.depth > 1) {
                         stackView.pop()
                         listView.currentIndex = -1
                         }
+                }
+            }
+
+            Label {
+            // This empty label is necessary to take up space
+            // and push the back button and ellipsis button to both edges.
+            // I guess I could've just tweaked things a bit.
+                elide: Label.ElideRight
+                horizontalAlignment: Qt.AlignHCenter
+                verticalAlignment: Qt.AlignVCenter
+                Layout.fillWidth: true
+            }
+
+                        ToolButton {
+            
+                icon.source: "images/menu.png"
+                onClicked: {
+                        drawer.open()
                 }
             }
 
