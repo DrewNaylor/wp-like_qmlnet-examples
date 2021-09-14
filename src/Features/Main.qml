@@ -44,6 +44,7 @@ ApplicationWindow {
         color: 'black'
     }
 
+
                 Label {
                 id: titleLabel
                 text: listView.currentItem ? listView.currentItem.text : "Gallery"
@@ -81,13 +82,10 @@ ApplicationWindow {
                 }
             }
 
-            Label {
+            Item {
             // This empty label is necessary to take up space
             // and push the back button and ellipsis button to both edges.
             // I guess I could've just tweaked things a bit.
-                elide: Label.ElideRight
-                horizontalAlignment: Qt.AlignHCenter
-                verticalAlignment: Qt.AlignVCenter
                 Layout.fillWidth: true
             }
 
