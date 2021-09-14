@@ -1,4 +1,9 @@
-﻿using System;
+﻿// Modifications to this file are Copyright (c) 2021 Drew Naylor and
+// are available under the MIT License, just like the original code.
+
+
+
+using System;
 using System.IO;
 using Qml.Net;
 using Qml.Net.Runtimes;
@@ -11,7 +16,7 @@ namespace Features
         {
             RuntimeManager.DiscoverOrDownloadSuitableQtRuntime();
             
-            QQuickStyle.SetStyle("Material");
+            QQuickStyle.SetStyle("Universal");
 
             using (var application = new QGuiApplication(args))
             {

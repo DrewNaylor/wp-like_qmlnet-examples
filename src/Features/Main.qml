@@ -1,7 +1,12 @@
+// Modifications to this file are Copyright (c) 2021 Drew Naylor and
+// are available under the MIT License, just like the original code.
+
+
+
 import QtQuick 2.9
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.3
-import QtQuick.Controls.Material 2.1
+import QtQuick.Controls.Universal 2.12
 
 ApplicationWindow {
     id: window
@@ -10,9 +15,10 @@ ApplicationWindow {
     visible: true
     title: "Qml.Net"
 
-    Material.theme: Material.Light
-    Material.accent: '#41cd52'
-    Material.primary: '#41cd52'
+    Universal.theme: Universal.Dark
+    Universal.accent: '#0050ef'
+	Universal.foreground: 'white'
+	Universal.background: 'black'
 
     Shortcut {
         sequences: ["Esc", "Back"]
@@ -29,14 +35,30 @@ ApplicationWindow {
     }
 
     header: ToolBar {
-        Material.foreground: "white"
+    
+                Label {
+                id: titleLabel
+                text: listView.currentItem ? listView.currentItem.text : "Gallery"
+                font.pixelSize: 20
+                elide: Label.ElideRight
+                horizontalAlignment: Qt.AlignHCenter
+                verticalAlignment: Qt.AlignVCenter
+                Layout.fillWidth: true
+            }
+
+    }
+
+    footer: ToolBar {
 
         RowLayout {
             spacing: 20
-            anchors.fill: parent
+            anchors.right: parent.right
 
             ToolButton {
-                icon.source: stackView.depth > 1 ? "images/back.png" : "images/drawer.png"
+            // TODO: Don't have the ellipsis button be the back button,
+            // but have a back button show up on the left side where the old
+            // slide-out menu appeared.
+                icon.source: stackView.depth > 1 ? "images/back.png" : "images/menu.png"
                 onClicked: {
                     if (stackView.depth > 1) {
                         stackView.pop()
@@ -47,31 +69,7 @@ ApplicationWindow {
                 }
             }
 
-            Label {
-                id: titleLabel
-                text: listView.currentItem ? listView.currentItem.text : "Gallery"
-                font.pixelSize: 20
-                elide: Label.ElideRight
-                horizontalAlignment: Qt.AlignHCenter
-                verticalAlignment: Qt.AlignVCenter
-                Layout.fillWidth: true
-            }
 
-            ToolButton {
-                icon.source: "images/menu.png"
-                onClicked: optionsMenu.open()
-
-                Menu {
-                    id: optionsMenu
-                    x: parent.width - width
-                    transformOrigin: Menu.TopRight
-
-                    MenuItem {
-                        text: "About"
-                        onTriggered: aboutDialog.open()
-                    }
-                }
-            }
         }
     }
 
@@ -107,6 +105,7 @@ ApplicationWindow {
                 ListElement { title: "Dynamics"; source: "pages/Dynamics.qml" }
                 ListElement { title: "Simple calculator"; source: "pages/Calculator.qml" }
                 ListElement { title: "Collections"; source: "pages/Collections.qml" }
+				ListElement { title: "About"; source: "pages/About.qml" }
             }
 
             ScrollIndicator.vertical: ScrollIndicator { }
