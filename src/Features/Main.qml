@@ -58,14 +58,19 @@ ApplicationWindow {
             // TODO: Don't have the ellipsis button be the back button,
             // but have a back button show up on the left side where the old
             // slide-out menu appeared.
-                icon.source: stackView.depth > 1 ? "images/back.png" : "images/menu.png"
+                icon.source: "images/menu.png"
+                onClicked: {
+                        drawer.open()
+                }
+            }
+
+            ToolButton {
+                icon.source: "images/back.png"
                 onClicked: {
                     if (stackView.depth > 1) {
                         stackView.pop()
                         listView.currentIndex = -1
-                    } else {
-                        drawer.open()
-                    }
+                        }
                 }
             }
 
