@@ -50,6 +50,12 @@ ApplicationWindow {
 
     footer: ToolBar {
 
+        transform: Translate {
+        // Move the menu to make it look like WP's ellipsis menu opening.
+        y: drawer.position - Math.min(window.height) / 3
+        
+        }
+
         RowLayout {
             spacing: 20
             anchors.fill: parent
@@ -97,7 +103,10 @@ ApplicationWindow {
         // kinda look like WP's ellipsis menu, except it
         // doesn't yet move the bar up. Maybe a translation
         // thing will help with that.
+        // Edge documentation:
+        // https://doc.qt.io/qt-5/qml-qtquick-controls2-drawer.html#edge-prop
         edge: Qt.BottomEdge
+
 
 
         ListView {
