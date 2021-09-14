@@ -99,6 +99,7 @@ ApplicationWindow {
         ListView {
             id: listView
             anchors.fill: parent
+            clip: true
             focus: true
             currentIndex: -1
 
