@@ -50,13 +50,12 @@ ApplicationWindow {
 
     footer: ToolBar {
 
-    id: appBar
+                id: appBar
 
         transform: Translate {
         // Move the menu to make it look like WP's ellipsis menu opening.
-        y: drawer.position * appBar.height * 0.33
-        
-        }
+        y: drawer.position * appBar.width * 0.33
+         }
 
         RowLayout {
             spacing: 20
