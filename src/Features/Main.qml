@@ -11,7 +11,7 @@ import QtQuick.Controls.Universal 2.12
 ApplicationWindow {
     id: window
     width: 360
-    height: 520
+    height: 720
     visible: true
     title: "Qml.Net"
 
