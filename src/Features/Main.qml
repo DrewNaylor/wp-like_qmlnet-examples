@@ -92,7 +92,7 @@ ApplicationWindow {
         id: drawer
         width: window.width
         height: 300
-        topMargin: 300
+        topMargin: Math.min(window.height) / 2
         interactive: stackView.depth === 1
 
 
