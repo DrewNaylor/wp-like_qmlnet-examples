@@ -50,9 +50,11 @@ ApplicationWindow {
 
     footer: ToolBar {
 
+    id: appBar
+
         transform: Translate {
         // Move the menu to make it look like WP's ellipsis menu opening.
-        y: drawer.position - Math.min(window.height) / 3
+        y: drawer.position * appBar.height * 0.33
         
         }
 
