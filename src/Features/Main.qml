@@ -71,7 +71,7 @@ ApplicationWindow {
                 id: titleLabel
                 // TODO: Figure out a way to keep the current page's
                 // title so that previous pages are shown again when pressing the Back button.
-                text: listView.currentItem ? listView.currentItem.text : "Gallery"
+                text: listView.currentItem ? listView.currentItem.text : "gallery"
                 // Not sure if this is the right font size, but it's closer.
                 font.pixelSize: 50
                 elide: Label.ElideRight
@@ -185,14 +185,14 @@ ApplicationWindow {
             }
 
             model: ListModel {
-                ListElement { title: "Signals"; source: "pages/Signals.qml" }
-                ListElement { title: "Notify signals"; source: "pages/NotifySignals.qml" }
-                ListElement { title: "Async/await"; source: "pages/AsyncAwait.qml" }
-                ListElement { title: ".NET objects"; source: "pages/NetObjects.qml" }
-                ListElement { title: "Dynamics"; source: "pages/Dynamics.qml" }
-                ListElement { title: "Simple calculator"; source: "pages/Calculator.qml" }
-                ListElement { title: "Collections"; source: "pages/Collections.qml" }
-				ListElement { title: "About"; source: "pages/About.qml" }
+                ListElement { title: "signals"; source: "pages/Signals.qml" }
+                ListElement { title: "notify signals"; source: "pages/NotifySignals.qml" }
+                ListElement { title: "async+await"; source: "pages/AsyncAwait.qml" }
+                ListElement { title: ".net objects"; source: "pages/NetObjects.qml" }
+                ListElement { title: "dynamics"; source: "pages/Dynamics.qml" }
+                ListElement { title: "simple calculator"; source: "pages/Calculator.qml" }
+                ListElement { title: "collections"; source: "pages/Collections.qml" }
+				ListElement { title: "about"; source: "pages/About.qml" }
             }
 
             ScrollIndicator.vertical: ScrollIndicator { }
