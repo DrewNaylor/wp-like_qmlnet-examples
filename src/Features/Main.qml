@@ -54,7 +54,7 @@ ApplicationWindow {
 
         transform: Translate {
         // Move the menu to make it look like WP's ellipsis menu opening.
-        y: drawer.position * appBar.height * -(Math.min(window.height) / 3)
+        y: drawer.position * appBar.height * -1.33
          }
 
         RowLayout {
