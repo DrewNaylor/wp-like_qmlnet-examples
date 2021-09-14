@@ -185,7 +185,7 @@ ApplicationWindow {
             }
 
             Label {
-                text: "Qml.Net is a bridge between .NET and Qml, allowing you to build powerfull user-interfaces driven by the .NET Framework."
+                text: "Qml.Net is a bridge between .NET and Qml, allowing you to build powerful user-interfaces driven by the .NET Framework."
                 anchors.margins: 20
                 anchors.top: logo.bottom
                 anchors.left: parent.left
