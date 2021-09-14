@@ -90,16 +90,16 @@ ApplicationWindow {
 
     Drawer {
         id: drawer
-        width: Math.min(window.width, window.height) / 3 * 2
-        height: window.height
+        width: window.width
+        height: Math.min(window.height, window.width) / 3 * 2
         interactive: stackView.depth === 1
+
 
         ListView {
             id: listView
-
+            anchors.fill: parent
             focus: true
             currentIndex: -1
-            anchors.fill: parent
 
             delegate: ItemDelegate {
                 width: parent.width
@@ -124,6 +124,7 @@ ApplicationWindow {
             }
 
             ScrollIndicator.vertical: ScrollIndicator { }
+            
         }
     }
 
