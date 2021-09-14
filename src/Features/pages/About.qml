@@ -1,6 +1,8 @@
 // Contents of this file were copied from the Main.qml file, and changes
 // to make that content work on this page are Copyright (c) 2021 Drew Naylor and
 // are available under the MIT License, just like the original code.
+// See the LICENSE file for more details.
+
 
 
 

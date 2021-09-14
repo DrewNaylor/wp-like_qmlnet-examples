@@ -1,5 +1,7 @@
 // Modifications to this file are Copyright (c) 2021 Drew Naylor and
 // are available under the MIT License, just like the original code.
+// See the LICENSE file for more details.
+
 
 
 
