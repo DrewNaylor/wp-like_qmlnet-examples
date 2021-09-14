@@ -15,6 +15,7 @@ ScrollablePage {
             width: parent.width
             wrapMode: Label.Wrap
             horizontalAlignment: Qt.AlignHCenter
-            text: "Qml.Net is a bridge between .NET and Qml, allowing you to build powerful user-interfaces driven by the .NET Framework."
+            text: "Qml.Net is a bridge between .NET and Qml, allowing you to build powerful user-interfaces driven by the .NET Framework.\n\n" +
+            "This example app has been modified by Drew Naylor to more closely resemble Windows Phone Metro/Modern apps."
     }
 }

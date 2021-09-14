@@ -13,7 +13,7 @@ ApplicationWindow {
     width: 360
     height: 720
     visible: true
-    title: "Qml.Net"
+    title: "Qml.Net - WP-like Example App"
 
     Universal.theme: Universal.Dark
     Universal.accent: '#0050ef'
