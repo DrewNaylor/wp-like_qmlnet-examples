@@ -32,8 +32,11 @@ ApplicationWindow {
     }
 
     Shortcut {
+    // The Menu key is the context menu key on the keyboard.
+    // I've hooked it up to the app bar drawer so that it's
+    // easier to open with the keyboard.
         sequence: "Menu"
-        onActivated: optionsMenu.open()
+        onActivated: drawer.open()
     }
 
     header: ToolBar {
@@ -45,6 +48,7 @@ ApplicationWindow {
     background: Rectangle {
         color: 'black'
     }
+
     RowLayout{
     anchors.left: parent.left
 
