@@ -36,6 +36,12 @@ ApplicationWindow {
     // I've hooked it up to the app bar drawer so that it's
     // easier to open with the keyboard.
         sequence: "Menu"
+        // TODO: It would be useful to have a way to open
+        // and close the app bar drawer using the same
+        // key. However, this would require a boolean
+        // to be set when the drawer is opened and closed,
+        // and I don't know enough about QML booleans right
+        // now and I need to go to bed.
         onActivated: drawer.open()
     }
 
