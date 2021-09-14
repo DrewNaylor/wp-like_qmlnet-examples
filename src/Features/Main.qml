@@ -43,7 +43,14 @@ ApplicationWindow {
     background: Rectangle {
         color: 'black'
     }
+    RowLayout{
+    anchors.left: parent.left
 
+                Item {
+                // Adding an empty Item to space the header from the left.
+                height: 50
+                width: 50
+                }
 
                 Label {
                 id: titleLabel
@@ -53,6 +60,8 @@ ApplicationWindow {
                 horizontalAlignment: Qt.AlignHCenter
                 verticalAlignment: Qt.AlignVCenter
                 Layout.fillWidth: true
+            }
+
             }
 
     }
@@ -89,7 +98,7 @@ ApplicationWindow {
                 Layout.fillWidth: true
             }
 
-                        ToolButton {
+            ToolButton {
             
                 icon.source: "images/menu.png"
                 onClicked: {
