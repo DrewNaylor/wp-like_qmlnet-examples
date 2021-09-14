@@ -207,20 +207,24 @@ ApplicationWindow {
         }
     }
     
-    Dialog {
-        id: aboutDialog
-        modal: true
-        focus: true
-        title: "About"
-        x: (window.width - width) / 2
-        y: window.height / 6
-        width: Math.min(window.width, window.height) / 3 * 2
+    // I'm keeping the original dialog here but commented-out
+    // because it may be useful eventually and I'd like
+    // to figure out how a dialog that looks like Windows
+    // Phone's pop-ups would look like in QML.
+  //  Dialog {
+    //    id: aboutDialog
+    //    modal: true
+    //    focus: true
+    //    title: "About"
+    //    x: (window.width - width) / 2
+    //    y: window.height / 6
+    //    width: Math.min(window.width, window.height) / 3 * 2
 
-        Label {
-            width: aboutDialog.availableWidth
-            text: "Qml.Net is a bridge between .NET and Qml, allowing you to build powerfull user-interfaces driven by the .NET Framework."
-            wrapMode: Label.Wrap
-            font.pixelSize: 12
-        }
-    }
+    //    Label {
+    //        width: aboutDialog.availableWidth
+    //        text: "Qml.Net is a bridge between .NET and Qml, allowing you to build powerfull user-interfaces driven by the .NET Framework."
+    //        wrapMode: Label.Wrap
+    //        font.pixelSize: 12
+    //    }
+    //}
 }
