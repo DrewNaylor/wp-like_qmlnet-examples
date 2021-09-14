@@ -92,8 +92,12 @@ ApplicationWindow {
         id: drawer
         width: window.width
         height: Math.min(window.height) / 3
-        topMargin: Math.min(window.height) / 3
         interactive: stackView.depth === 1
+        // Setting edge to Qt.BottomEdge makes the menu
+        // kinda look like WP's ellipsis menu, except it
+        // doesn't yet move the bar up. Maybe a translation
+        // thing will help with that.
+        edge: Qt.BottomEdge
 
 
         ListView {
