@@ -103,6 +103,22 @@ ApplicationWindow {
                         PropertyChanges {target: searchButtonBackgroundArea; height: 40}
                     }
                 ]
+
+                // Set up the transitions.
+                transitions: [
+                    Transition {
+                        from: "PRESSED"
+                        to: "RELEASED"
+                        NumberAnimation { target: searchButtonBackgroundArea; duration: 60}
+                    }
+
+                    Transition {
+                        from: "RELEASED"
+                        to: "PRESSED"
+                        NumberAnimation { target: searchButtonBackgroundArea; duration: 60}
+                    }
+                
+                ]
            }
 
          }
