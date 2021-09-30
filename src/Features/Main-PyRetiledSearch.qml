@@ -49,6 +49,7 @@ ApplicationWindow {
             // page in the QML docs here:
             // https://doc.qt.io/qt-5/qtquickcontrols2-customize.html#customizing-button
             contentItem: Text {
+                id: searchButtonText
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
                 font.pixelSize: 18
@@ -65,8 +66,6 @@ ApplicationWindow {
                 border.color: "white"
                 border.width: 2
                 radius: 0
-                // Change the button background to Cobalt when pressed.
-                color: searchButton.down ? "#0050ef" : "black"
 
                 // I think this is the way I'll rotate and shrink the button
                 // when it's held down:
@@ -91,6 +90,9 @@ ApplicationWindow {
                     State {
                         name: "PRESSED"
                         PropertyChanges {target: searchButtonBackgroundArea; scale: 0.95}
+                        // Scales down the font so it looks like it should.
+                        PropertyChanges {target: searchButtonText; scale: 0.95}
+                        // Change the button background to Cobalt when pressed.
                         PropertyChanges {target: searchButtonBackgroundArea; color: "#0050ef"}
                     },
                     // There's supposed to be a comma there.
@@ -98,6 +100,7 @@ ApplicationWindow {
                         name: "RELEASED"
                         PropertyChanges {target: searchButtonBackgroundArea; scale: 1.0}
                         PropertyChanges {target: searchButtonBackgroundArea; color: "black"}
+                        PropertyChanges {target: searchButtonText; scale: 1.0}
                     }
                 ]
 
@@ -106,14 +109,16 @@ ApplicationWindow {
                     Transition {
                         from: "PRESSED"
                         to: "RELEASED"
-                        NumberAnimation { target: searchButtonBackgroundArea; duration: 120}
+                        NumberAnimation { target: searchButtonBackgroundArea; duration: 60}
+                        NumberAnimation { target: searchButtonText; duration: 60}
                         ColorAnimation { target: searchButtonBackgroundArea; duration: 60}
                     },
 
                     Transition {
                         from: "RELEASED"
                         to: "PRESSED"
-                        NumberAnimation { target: searchButtonBackgroundArea; duration: 120}
+                        NumberAnimation { target: searchButtonBackgroundArea; duration: 60}
+                        NumberAnimation { target: searchButtonText; duration: 60}
                         ColorAnimation { target: searchButtonBackgroundArea; duration: 60}
                     }
                 
