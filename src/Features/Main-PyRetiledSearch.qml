@@ -45,6 +45,17 @@ ApplicationWindow {
             Layout.leftMargin: 24
             font.pixelSize: 18
             text: qsTr("search")
+            // Had to use the contentItem Text thing to change stuff from the "customizing button"
+            // page in the QML docs here:
+            // https://doc.qt.io/qt-5/qtquickcontrols2-customize.html#customizing-button
+            contentItem: Text {
+                horizontalAlignment: Text.AlignHCenter
+                verticalAlignment: Text.AlignVCenter
+                font.pixelSize: 18
+                text: qsTr("search")
+                color: "white"
+           }
+
          }
     }
 
