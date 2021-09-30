@@ -4,8 +4,20 @@ import QtQuick.Controls 2.3
 import QtQuick.Controls.Universal 2.12
 
 ApplicationWindow {
-    width: 640
-    height: 480
+    id: window
+    width: 360
+    height: 720
     visible: true
-    title: qsTr("Hello World")
+    title: "RetiledSearch"
+
+    Universal.theme: Universal.Dark
+    Universal.accent: '#0050ef'
+	Universal.foreground: 'white'
+	Universal.background: 'black'
+
+    // I'm basically just using this project to
+    // figure out how to port Retiled to QML, then I'll bring in Python
+    // so it doesn't need QML.NET, which doesn't have ARM builds for
+    // the unmanaged library.
+
 }
