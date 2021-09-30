@@ -47,9 +47,12 @@ ApplicationWindow {
             // https://stackoverflow.com/a/39052406
                 background: Rectangle {
                     radius: 0
+                    border.width: searchBox.focus ? 2 : 0
                     // Setting the background seems to work well enough,
                     // but I need to change the placeholder text here so
                     // it disappears when focused.
+                    // The left is what I want it to be when focused,
+                    // and the right is what it usually is.
                     border.color: searchBox.focus ? "#0050ef" : "#CCCCCC"
                 }
 
