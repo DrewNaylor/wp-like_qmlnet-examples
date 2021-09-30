@@ -49,6 +49,9 @@ ApplicationWindow {
             // Selections aren't working for some reason, and I thought it
             // was just a selection color issue.
             selectionColor: "#0050ef"
+            // It should be fixed now by using selectByMouse, which is detailed here:
+            // https://stackoverflow.com/a/38882378
+            selectByMouse: true
 
             // Changing the style for the textbox. Documentation:
             // https://doc.qt.io/qt-5/qml-qtquick-controls-styles-textfieldstyle.html
