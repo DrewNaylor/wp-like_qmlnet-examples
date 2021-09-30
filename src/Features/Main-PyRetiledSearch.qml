@@ -20,4 +20,9 @@ ApplicationWindow {
     // so it doesn't need QML.NET, which doesn't have ARM builds for
     // the unmanaged library.
 
+    TextField {
+    width: 50
+    height: 10
+    }
+
 }
