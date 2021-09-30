@@ -73,6 +73,10 @@ ApplicationWindow {
                 // https://doc.qt.io/qt-5/qml-qtquick-animation.html#running-prop
                 // Better stuff on animations:
                 // https://doc.qt.io/qt-5/qtquick-statesanimations-animations.html
+                // Actually, this is what I needed:
+                // https://doc.qt.io/qt-5/qml-qtquick-scaleanimator.html
+                // Wait, this looks better, but is older so I hope it works:
+                // https://forum.qt.io/topic/2712/animating-button-press
 
                 ButtonPressAnimation on x {
                     running: searchButton.down
