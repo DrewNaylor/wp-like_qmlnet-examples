@@ -68,6 +68,10 @@ ApplicationWindow {
                 // I think this is the way I'll rotate and shrink the button
                 // when it's held down:
                 // https://doc.qt.io/qt-5/qml-qtquick-animation.html#running-prop
+                ButtonPressAnimation on x {
+                    running: searchButton.down
+                    from: 0 to 60
+                }
            }
 
          }
