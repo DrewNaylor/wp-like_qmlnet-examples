@@ -21,19 +21,19 @@ ApplicationWindow {
     // the unmanaged library.
     ColumnLayout {
         spacing: 4
-        Layout.leftMargin: 24
-        Layout.topMargin: 10
-        Layout.rightMargin: 24
-        Layout.bottomMargin: 0
+        Layout.fillWidth: true
 
          TextField {
-            implicitWidth: 300
+            Layout.fillWidth: true
+            // I don't know how to get the width to change when the window
+            // is resized, so it's hardcoded at 312 for now.
+            implicitWidth: 312
             implicitHeight: 40
             placeholderText: qsTr("enter a search term here")
             Layout.leftMargin: 24
-        Layout.topMargin: 10
-        Layout.rightMargin: 24
-        Layout.bottomMargin: 0
+            Layout.topMargin: 10
+            Layout.rightMargin: 24
+            Layout.bottomMargin: 0
 
          }
          Button {
