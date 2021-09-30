@@ -34,6 +34,8 @@ ApplicationWindow {
             Layout.topMargin: 10
             Layout.rightMargin: 24
             Layout.bottomMargin: 0
+            // I don't know if pixelSize is the right property
+            // to change for DPI scaling.
             font.pixelSize: 18
 
          }
