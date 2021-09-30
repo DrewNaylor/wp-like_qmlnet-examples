@@ -39,6 +39,7 @@ ApplicationWindow {
             // I don't know if pixelSize is the right property
             // to change for DPI scaling.
             font.pixelSize: 18
+            // Text color needs to be set here.
             color: "black"
 
             // Changing the style for the textbox. Documentation:
