@@ -138,6 +138,9 @@ ApplicationWindow {
                 // https://doc.qt.io/qt-5/qml-qtquick-scaleanimator.html
                 // Wait, this looks better, but is older so I hope it works:
                 // https://forum.qt.io/topic/2712/animating-button-press
+                // TODO: Figure out how to rotate the button toward where it's
+                // pressed, like on WP. Maybe WinUI code will help me figure it
+                // out for Avalonia, then I'll translate it to QML.
 
 
                 // We're using MultiPointTouchArea to ensure this'll work with touch.
@@ -148,6 +151,11 @@ ApplicationWindow {
                 }
 
                 // Set up the states.
+                // TODO: Move all the style and property changes to separate files
+                // so that they can be reused easily. Also, figure out how to change
+                // the accent color in those style qml files based on what's in a config
+                // file. Maybe I can use JS to read that file and get the user's accent color,
+                // though that may not be possible. Hopefully there's something.
                 states: [
                     State {
                         name: "PRESSED"
