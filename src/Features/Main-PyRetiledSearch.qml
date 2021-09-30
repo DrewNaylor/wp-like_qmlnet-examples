@@ -2,6 +2,7 @@ import QtQuick 2.9
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.3
 import QtQuick.Controls.Universal 2.12
+import QtQuick.Controls.Styles 1.4
 
 ApplicationWindow {
     id: window
@@ -24,6 +25,7 @@ ApplicationWindow {
         Layout.fillWidth: true
 
          TextField {
+            id: searchBox
             Layout.fillWidth: true
             // I don't know how to get the width to change when the window
             // is resized, so it's hardcoded at 312 for now.
@@ -37,6 +39,16 @@ ApplicationWindow {
             // I don't know if pixelSize is the right property
             // to change for DPI scaling.
             font.pixelSize: 18
+
+            // Changing the style for the textbox. Documentation:
+            // https://doc.qt.io/qt-5/qml-qtquick-controls-styles-textfieldstyle.html
+            style: TextFieldStyle {
+                textColor: "black"
+                background: Rectangle {
+                    radius: 0
+                    border.color: searchBox.focus ? "white" : "#CCCCCC"
+                }
+            }
 
          }
          Button {
