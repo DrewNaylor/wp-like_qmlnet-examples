@@ -64,6 +64,10 @@ ApplicationWindow {
                 radius: 0
                 // Change the button background to Cobalt when pressed.
                 color: searchButton.down ? "#0050ef" : "black"
+
+                // I think this is the way I'll rotate and shrink the button
+                // when it's held down:
+                // https://doc.qt.io/qt-5/qml-qtquick-animation.html#running-prop
            }
 
          }
