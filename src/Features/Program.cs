@@ -32,7 +32,7 @@ namespace Features
                     Qml.Net.Qml.RegisterType<CalculatorModel>("Features");
                     Qml.Net.Qml.RegisterType<CollectionsModel>("Features");
 
-                    qmlEngine.Load("Main.qml");
+                    qmlEngine.Load("Main-PyRetiledSearch.qml");
                     
                     return application.Exec();
                 }
