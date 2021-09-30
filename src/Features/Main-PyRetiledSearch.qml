@@ -21,15 +21,25 @@ ApplicationWindow {
     // the unmanaged library.
     ColumnLayout {
         spacing: 4
+        Layout.leftMargin: 24
+        Layout.topMargin: 10
+        Layout.rightMargin: 24
+        Layout.bottomMargin: 0
 
          TextField {
-            width: 300
-            height: 40
+            implicitWidth: 300
+            implicitHeight: 40
             placeholderText: qsTr("enter a search term here")
+            Layout.leftMargin: 24
+        Layout.topMargin: 10
+        Layout.rightMargin: 24
+        Layout.bottomMargin: 0
+
          }
          Button {
-            width: 100
-            height: 50
+            implicitWidth: 90
+            implicitHeight: 40
+            Layout.leftMargin: 24
          }
     }
 
