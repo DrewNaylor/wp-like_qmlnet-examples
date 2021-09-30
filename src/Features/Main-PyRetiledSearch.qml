@@ -39,16 +39,19 @@ ApplicationWindow {
             // I don't know if pixelSize is the right property
             // to change for DPI scaling.
             font.pixelSize: 18
+            color: "black"
 
             // Changing the style for the textbox. Documentation:
             // https://doc.qt.io/qt-5/qml-qtquick-controls-styles-textfieldstyle.html
-            style: TextFieldStyle {
-                textColor: "black"
+            // Apparently that doesn't work. See here:
+            // https://stackoverflow.com/a/39052406
                 background: Rectangle {
                     radius: 0
-                    border.color: searchBox.focus ? "white" : "#CCCCCC"
+                    // Setting the background seems to work well enough,
+                    // but I need to change the placeholder text here so
+                    // it disappears when focused.
+                    border.color: searchBox.focus ? "#0050ef" : "#CCCCCC"
                 }
-            }
 
          }
          Button {
