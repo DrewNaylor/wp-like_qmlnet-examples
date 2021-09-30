@@ -49,7 +49,6 @@ ApplicationWindow {
             // page in the QML docs here:
             // https://doc.qt.io/qt-5/qtquickcontrols2-customize.html#customizing-button
             contentItem: Text {
-                id: searchButtonText
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
                 font.pixelSize: 18
@@ -91,18 +90,19 @@ ApplicationWindow {
                         name: "PRESSED"
                         // Avalonia used 0.98, and I thought it looked bad in QML,
                         // but I think it's fine.
-                        PropertyChanges {target: searchButtonBackgroundArea; scale: 0.98}
-                        // Scales down the font so it looks like it should.
-                        PropertyChanges {target: searchButtonText; scale: 0.98}
+                        // We can actually just scale the whole button down rather than
+                        // the rectangle we're in. Didn't know that, so I decided to see if
+                        // QML allows that because that seems to be what Avalonia does,
+                        // and it works.
+                        PropertyChanges {target: searchButton; scale: 0.98}
                         // Change the button background to Cobalt when pressed.
                         PropertyChanges {target: searchButtonBackgroundArea; color: "#0050ef"}
                     },
                     // There's supposed to be a comma there.
                     State {
                         name: "RELEASED"
-                        PropertyChanges {target: searchButtonBackgroundArea; scale: 1.0}
+                        PropertyChanges {target: searchButton; scale: 1.0}
                         PropertyChanges {target: searchButtonBackgroundArea; color: "black"}
-                        PropertyChanges {target: searchButtonText; scale: 1.0}
                     }
                 ]
 
@@ -111,16 +111,14 @@ ApplicationWindow {
                     Transition {
                         from: "PRESSED"
                         to: "RELEASED"
-                        NumberAnimation { target: searchButtonBackgroundArea; duration: 60}
-                        NumberAnimation { target: searchButtonText; duration: 60}
+                        NumberAnimation { target: searchButton; duration: 60}
                         ColorAnimation { target: searchButtonBackgroundArea; duration: 60}
                     },
 
                     Transition {
                         from: "RELEASED"
                         to: "PRESSED"
-                        NumberAnimation { target: searchButtonBackgroundArea; duration: 60}
-                        NumberAnimation { target: searchButtonText; duration: 60}
+                        NumberAnimation { target: searchButton; duration: 60}
                         ColorAnimation { target: searchButtonBackgroundArea; duration: 60}
                     }
                 
