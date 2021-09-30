@@ -34,6 +34,7 @@ ApplicationWindow {
             Layout.topMargin: 10
             Layout.rightMargin: 24
             Layout.bottomMargin: 0
+            font.pixelSize: 18
 
          }
          Button {
