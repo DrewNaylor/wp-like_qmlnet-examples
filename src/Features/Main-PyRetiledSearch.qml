@@ -43,6 +43,8 @@ ApplicationWindow {
             implicitWidth: 90
             implicitHeight: 40
             Layout.leftMargin: 24
+            font.pixelSize: 18
+            text: qsTr("search")
          }
     }
 
