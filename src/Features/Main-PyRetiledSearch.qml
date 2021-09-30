@@ -40,6 +40,7 @@ ApplicationWindow {
 
          }
          Button {
+            id: searchButton
             
             Layout.leftMargin: 24
             font.pixelSize: 18
@@ -61,7 +62,8 @@ ApplicationWindow {
                 border.color: "white"
                 border.width: 2
                 radius: 0
-                color: "black"
+                // Change the button background to Cobalt when pressed.
+                color: searchButton.down ? "#0050ef" : "black"
            }
 
          }
