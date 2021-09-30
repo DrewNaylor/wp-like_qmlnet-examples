@@ -8,7 +8,7 @@ ApplicationWindow {
     width: 360
     height: 720
     visible: true
-    title: "RetiledSearch"
+    title: qsTr("RetiledSearch")
 
     Universal.theme: Universal.Dark
     Universal.accent: '#0050ef'
@@ -21,8 +21,9 @@ ApplicationWindow {
     // the unmanaged library.
 
     TextField {
-    width: 50
-    height: 10
+    width: 300
+    height: 40
+    placeholderText: qsTr("enter a search term here")
     }
 
 }
