@@ -54,6 +54,7 @@ ApplicationWindow {
                     // The left is what I want it to be when focused,
                     // and the right is what it usually is.
                     border.color: searchBox.focus ? "#0050ef" : "#CCCCCC"
+                    color: searchBox.focus ? "white" : "#CCCCCC"
                 }
 
          }
