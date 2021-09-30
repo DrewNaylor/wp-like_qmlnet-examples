@@ -89,10 +89,11 @@ ApplicationWindow {
                 states: [
                     State {
                         name: "PRESSED"
-                        // Avalonia used 0.98, but it doesn't look right in QML.
-                        PropertyChanges {target: searchButtonBackgroundArea; scale: 0.97}
+                        // Avalonia used 0.98, and I thought it looked bad in QML,
+                        // but I think it's fine.
+                        PropertyChanges {target: searchButtonBackgroundArea; scale: 0.98}
                         // Scales down the font so it looks like it should.
-                        PropertyChanges {target: searchButtonText; scale: 0.97}
+                        PropertyChanges {target: searchButtonText; scale: 0.98}
                         // Change the button background to Cobalt when pressed.
                         PropertyChanges {target: searchButtonBackgroundArea; color: "#0050ef"}
                     },
