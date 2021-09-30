@@ -32,6 +32,11 @@ ApplicationWindow {
             implicitWidth: 312
             implicitHeight: 40
             placeholderText: qsTr("enter a search term here")
+            // I think that's a close-enough color to the watermark
+            // color used in Avalonia. Had to use Window Spy to figure it out,
+            // since there was no obvious way to figure it out from Avalonia's
+            // source.
+            placeholderTextColor: searchBox.focus ? "transparent" : "#666666"
             Layout.leftMargin: 24
             Layout.topMargin: 10
             Layout.rightMargin: 24
