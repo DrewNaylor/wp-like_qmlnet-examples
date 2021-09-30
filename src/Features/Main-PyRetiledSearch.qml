@@ -46,6 +46,9 @@ ApplicationWindow {
             font.pixelSize: 18
             // Text color needs to be set here.
             color: "black"
+            // Selections aren't working for some reason, and I thought it
+            // was just a selection color issue.
+            selectionColor: "#0050ef"
 
             // Changing the style for the textbox. Documentation:
             // https://doc.qt.io/qt-5/qml-qtquick-controls-styles-textfieldstyle.html
@@ -59,6 +62,8 @@ ApplicationWindow {
                     // it disappears when focused.
                     // The left is what I want it to be when focused,
                     // and the right is what it usually is.
+                    // TODO: Figure out how to remove focus when the button is
+                    // focused.
                     border.color: searchBox.focus ? "#0050ef" : "transparent"
                     color: searchBox.focus ? "white" : "#CCCCCC"
                 }
