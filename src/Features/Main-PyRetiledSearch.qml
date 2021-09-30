@@ -19,9 +19,8 @@ ApplicationWindow {
     // figure out how to port Retiled to QML, then I'll bring in Python
     // so it doesn't need QML.NET, which doesn't have ARM builds for
     // the unmanaged library.
-    StackLayout {
-    
-        anchors.fill: parent
+    ColumnLayout {
+        spacing: 4
 
          TextField {
             width: 300
