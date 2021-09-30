@@ -78,10 +78,6 @@ ApplicationWindow {
                 // Wait, this looks better, but is older so I hope it works:
                 // https://forum.qt.io/topic/2712/animating-button-press
 
-                ButtonPressAnimation on x {
-                    running: searchButton.down
-                    from: 0; to 60
-                }
 
                 // We're using MultiPointTouchArea to ensure this'll work with touch.
                 MultiPointTouchArea {
@@ -96,7 +92,8 @@ ApplicationWindow {
                         name: "PRESSED"
                         PropertyChanges {target: searchButtonBackgroundArea; width: 85}
                         PropertyChanges {target: searchButtonBackgroundArea; height: 35}
-                    }
+                    },
+                    // There's supposed to be a comma there.
                     State {
                         name: "RELEASED"
                         PropertyChanges {target: searchButtonBackgroundArea; width: 90}
@@ -110,7 +107,7 @@ ApplicationWindow {
                         from: "PRESSED"
                         to: "RELEASED"
                         NumberAnimation { target: searchButtonBackgroundArea; duration: 60}
-                    }
+                    },
 
                     Transition {
                         from: "RELEASED"
