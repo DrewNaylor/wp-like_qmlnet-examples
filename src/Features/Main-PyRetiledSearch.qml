@@ -40,8 +40,7 @@ ApplicationWindow {
 
          }
          Button {
-            implicitWidth: 90
-            implicitHeight: 40
+            
             Layout.leftMargin: 24
             font.pixelSize: 18
             text: qsTr("search")
@@ -54,6 +53,15 @@ ApplicationWindow {
                 font.pixelSize: 18
                 text: qsTr("search")
                 color: "white"
+            }
+           // Also need to change the background and border.
+           background: Rectangle {
+                implicitWidth: 90
+                implicitHeight: 40
+                border.color: "white"
+                border.width: 2
+                radius: 0
+                color: "black"
            }
 
          }
