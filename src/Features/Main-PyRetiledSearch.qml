@@ -85,6 +85,20 @@ ApplicationWindow {
                     onPressed: searchButtonBackgroundArea.state = "PRESSED"
                     onReleased: searchButtonBackgroundArea.state = "RELEASED"
                 }
+
+                // Set up the states.
+                states: [
+                    State {
+                        name: "PRESSED"
+                        PropertyChanges {target: searchButtonBackgroundArea; width: 85}
+                        PropertyChanges {target: searchButtonBackgroundArea; height: 35}
+                    }
+                    State {
+                        name: "RELEASED"
+                        PropertyChanges {target: searchButtonBackgroundArea; width: 90}
+                        PropertyChanges {target: searchButtonBackgroundArea; height: 40}
+                    }
+                ]
            }
 
          }
