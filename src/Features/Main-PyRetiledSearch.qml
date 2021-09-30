@@ -90,14 +90,12 @@ ApplicationWindow {
                 states: [
                     State {
                         name: "PRESSED"
-                        PropertyChanges {target: searchButtonBackgroundArea; width: 85}
-                        PropertyChanges {target: searchButtonBackgroundArea; height: 35}
+                        PropertyChanges {target: searchButtonBackgroundArea; scale: 0.8}
                     },
                     // There's supposed to be a comma there.
                     State {
                         name: "RELEASED"
-                        PropertyChanges {target: searchButtonBackgroundArea; width: 90}
-                        PropertyChanges {target: searchButtonBackgroundArea; height: 40}
+                        PropertyChanges {target: searchButtonBackgroundArea; scale: 1.0}
                     }
                 ]
 
@@ -106,13 +104,13 @@ ApplicationWindow {
                     Transition {
                         from: "PRESSED"
                         to: "RELEASED"
-                        NumberAnimation { target: searchButtonBackgroundArea; duration: 60}
+                        NumberAnimation { target: searchButtonBackgroundArea; duration: 120}
                     },
 
                     Transition {
                         from: "RELEASED"
                         to: "PRESSED"
-                        NumberAnimation { target: searchButtonBackgroundArea; duration: 60}
+                        NumberAnimation { target: searchButtonBackgroundArea; duration: 120}
                     }
                 
                 ]
