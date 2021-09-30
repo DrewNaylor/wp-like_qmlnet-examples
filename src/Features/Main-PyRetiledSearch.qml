@@ -57,8 +57,11 @@ ApplicationWindow {
             }
            // Also need to change the background and border.
            background: Rectangle {
+                id: searchButtonBackgroundArea
                 implicitWidth: 90
                 implicitHeight: 40
+                // Set the default state.
+                state: "RELEASED"
                 border.color: "white"
                 border.width: 2
                 radius: 0
@@ -74,6 +77,13 @@ ApplicationWindow {
                 ButtonPressAnimation on x {
                     running: searchButton.down
                     from: 0; to 60
+                }
+
+                // We're using MultiPointTouchArea to ensure this'll work with touch.
+                MultiPointTouchArea {
+                    anchors.fill: parent
+                    onPressed: searchButtonBackgroundArea.state = "PRESSED"
+                    onReleased: searchButtonBackgroundArea.state = "RELEASED"
                 }
            }
 
